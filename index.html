@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Python Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Skulpt to allow Python execution in the browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.0.0/skulpt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.0.0/skulpt-stdlib.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Learn Python - Complete Interactive Course</h1>
+    </header>
+
+    <section class="course">
+        <!-- Lesson 1 -->
+        <div class="section" id="section1">
+            <h2 class="section-title">1. Introduction to Python</h2>
+            <div class="section-content">
+                <p>Python is a popular programming language known for its simplicity. Let's start with printing a simple message.</p>
+
+                <h3>Example:</h3>
+                <pre><code>print("Hello, World!")</code></pre>
+                
+                <p>When you run this, Python will print "Hello, World!" to the console.</p>
+
+                <p><strong>Exercise:</strong> Try writing your own Python code below to print your name.</p>
+
+                <div class="editor">
+                    <textarea id="editor1" rows="4" cols="50">print("Your Name")</textarea>
+                    <button onclick="runCode(1)">Run Code</button>
+                    <pre id="output1" class="output"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson 2 -->
+        <div class="section" id="section2">
+            <h2 class="section-title">2. Variables and Data Types</h2>
+            <div class="section-content">
+                <p>In Python, variables are used to store data. Let's learn about different types of variables:</p>
+
+                <h3>Example:</h3>
+                <pre><code>
+name = "Alice"
+age = 25
+print("Name:", name)
+print("Age:", age)
+                </code></pre>
+
+                <p><strong>Exercise:</strong> Write your own Python code below. Store your name and age in variables, and print them out.</p>
+
+                <div class="editor">
+                    <textarea id="editor2" rows="6" cols="50">name = "Your Name"\nage = 18\nprint(name)\nprint(age)</textarea>
+                    <button onclick="runCode(2)">Run Code</button>
+                    <pre id="output2" class="output"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson 3 -->
+        <div class="section" id="section3">
+            <h2 class="section-title">3. Basic Operators</h2>
+            <div class="section-content">
+                <p>Python allows you to perform basic mathematical operations. Let's learn how:</p>
+
+                <h3>Example:</h3>
+                <pre><code>
+# Addition
+a = 5 + 3
+print(a)
+
+# Subtraction
+b = 10 - 2
+print(b)
+
+# Multiplication
+c = 4 * 3
+print(c)
+                </code></pre>
+
+                <p><strong>Exercise:</strong> Write a Python code that multiplies two numbers and prints the result.</p>
+
+                <div class="editor">
+                    <textarea id="editor3" rows="6" cols="50">num1 = 6\nnum2 = 7\nresult = num1 * num2\nprint(result)</textarea>
+                    <button onclick="runCode(3)">Run Code</button>
+                    <pre id="output3" class="output"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson 4 -->
+        <div class="section" id="section4">
+            <h2 class="section-title">4. Control Flow (If Statements)</h2>
+            <div class="section-content">
+                <p>Python uses <code>if</code> statements to make decisions in your code based on conditions.</p>
+
+                <h3>Example:</h3>
+                <pre><code>
+age = 18
+if age >= 18:
+    print("You're an adult.")
+else:
+    print("You're a minor.")
+                </code></pre>
+
+                <p><strong>Exercise:</strong> Write a Python program that checks if a number is positive or negative.</p>
+
+                <div class="editor">
+                    <textarea id="editor4" rows="6" cols="50">number = -5\nif number > 0:\n    print("Positive")\nelse:\n    print("Negative")</textarea>
+                    <button onclick="runCode(4)">Run Code</button>
+                    <pre id="output4" class="output"></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Python Course | Created by FSXstealth</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
