@@ -1,96 +1,68 @@
-/* Basic styling for the website */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif; /* Updated font */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
     color: #333;
-    line-height: 1.6;
-    padding: 0 20px;
 }
 
 header {
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+    margin-bottom: 20px;
 }
 
 .course {
-    max-width: 900px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
 }
 
 .section {
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    background: white;
     border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
 }
 
 .section-title {
-    font-size: 1.5em;
-    cursor: pointer;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.section-title:hover {
-    color: #007BFF;
-}
-
-.section-content {
-    display: none;
-    margin-top: 10px;
-    transition: all 0.5s ease;
-}
-
-.section.expanded .section-content {
-    display: block;
+    color: #0056b3;
 }
 
 .editor {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    resize: none;
+    font-family: 'Roboto', monospace; /* Use a monospace font for code */
 }
 
 button {
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
     border: none;
+    background: #28a745;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: #218838;
 }
 
 .output {
-    margin-top: 10px;
+    background: #e9ecef;
     padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    color: green;
-    white-space: pre-wrap;
+    border-radius: 5px;
+    margin-top: 10px;
 }
