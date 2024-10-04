@@ -1,24 +1,20 @@
-function builtinRead(x) {
-    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
-        throw "File not found: '" + x + "'";
-    }
-    return Sk.builtinFiles["files"][x];
-}
-
 function runCode(section) {
-    let editorContent = document.getElementById(`editor${section}`).value;
-    let outputElement = document.getElementById(`output${section}`);
+    let code;
+    if (section === 1) {
+        code = document.getElementById("editor1").value;
+    } else if (section === 2) {
+        code = document.getElementById("editor2").value;
+    } else if (section === 3) {
+        code = document.getElementById("editor3").value;
+    } else if (section === 4) {
+        code = document.getElementById("editor4").value;
+    }
 
-    outputElement.innerText = ""; // Clear previous output
-
-    Sk.configure({ 
-        output: function (text) {
-            outputElement.innerText += text;
-        }, 
-        read: builtinRead
-    });
-
-    Sk.importMainWithBody("<stdin>", false, editorContent).catch((error) => {
-        outputElement.innerText = `Error: ${error.toString()}`;
-    });
+    try {
+        // Use eval to execute the code (for simplicity in this example)
+        let output = eval(code);
+        document.getElementById(`output${section}`).innerText = output !== undefined ? output : "No output";
+    } catch (error) {
+        document.getElementById(`output${section}`).innerText = "Error: " + error.message;
+    }
 }
