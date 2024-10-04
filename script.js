@@ -13,7 +13,7 @@ function runCode(section) {
 
 // Function to toggle the visibility of sections
 function toggleSection(sectionId) {
-    const sectionContent = document.getElementById(sectionId);
+    const sectionContent = document.getElementById(sectionId).querySelector('.section-content');
     if (sectionContent.style.display === "none") {
         sectionContent.style.display = "block"; // Show the section
     } else {
